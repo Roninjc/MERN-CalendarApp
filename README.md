@@ -1,5 +1,5 @@
 # Backend MERN - Calendar App
 
-Backend en del Calendar App
+Backend del Calendar App
 
 Node, Express y Mongo

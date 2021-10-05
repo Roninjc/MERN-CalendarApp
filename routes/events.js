@@ -25,7 +25,7 @@ router.post(
     [
         check('title', 'Tittelen er obligatorisk').not().isEmpty(),
         check('start', 'Startdato er obligatorisk').custom( isDate ),
-        check('start', 'Sluttdato er obligatorisk').custom( isDate ),
+        check('end', 'Sluttdato er obligatorisk').custom( isDate ),
         validateFields
     ],
     createEvent
@@ -34,6 +34,12 @@ router.post(
 // Actualizar evento
 router.put(
     '/:id',
+    [
+        check('title', 'Tittelen er obligatorisk').not().isEmpty(),
+        check('start', 'Startdato er obligatorisk').custom( isDate ),
+        check('end', 'Sluttdato er obligatorisk').custom( isDate ),
+        validateFields
+    ],
     updateEvent    
 );
 
